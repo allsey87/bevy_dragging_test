@@ -142,7 +142,7 @@ fn setup(
                     let intersection = ray.intersect_plane(Vec3::ZERO, Vec3::Y);
                     if let Some(distance) = intersection {
                         
-                        // this effectively applies the force exactly to the center of the block
+                        // apply force at an offset if the backend gave us this information
                         let application_point = match drag_target.offset {
                             Some(offset) => transform.transform_point(offset),
                             None => transform.translation(),
