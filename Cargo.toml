@@ -1,0 +1,12 @@
+[package]
+name = "bevy_dragging_test"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = { version = "0.11.3", features = ["wayland", "dynamic_linking", "jpeg"] }
+bevy_rapier3d = { version = "0.22.0", features = ["debug-render-3d"] }
+bevy_mod_picking = { version = "0.15.0", default-features = false, features = ["backend_rapier"] }
+tracing = "0.1"
